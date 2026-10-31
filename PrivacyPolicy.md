@@ -1,10 +1,11 @@
 # Perspicio
-Last updated October 30, 2026
+Last updated October 31, 2026
 
 Perspicio ("the app") is a study application operated by Airwulf LLC. This policy describes what we collect, why, and the choices you have.
 
 What we collect
 Account information — name, email address, username, date of birth, and a hashed password when you create an account. We use your date of birth to confirm you are at least 13 and to choose ad settings for your age (see Advertising identifiers below).
+Ad measurement — in the iOS app, RevenueCat receives records of ads loading, being displayed, being tapped, or failing to load; rewarded-ad offers being shown or accepted; and rewards reported as earned by the ad SDK. These records include the ad format and placement (where it appears in the app), ad unit and network, mediation provider, impression ID, timestamps, and, when available, the revenue amount and currency or load-error details. They are linked to the same RevenueCat app user ID used for purchases, which is associated with your Perspicio account when you sign in. We use them to measure ad performance and revenue alongside subscriptions, not to personalize ads. This measurement does not itself collect the advertising identifier (IDFA), and we do not add your search queries or study content to these events. It does not verify or grant an AI unlock: our server separately verifies rewarded ads with Google AdMob as described below.
 Sign-in — our servers check email-and-password sign-in themselves. Google Firebase Authentication handles Sign in with Apple and Google, and when you create an account with an email address a matching sign-in record (your email address, name, and password) may also be created there. If you use Apple or Google sign-in, Apple or Google and Firebase process it and we receive an identity token that includes your email address; Firebase keeps a sign-in record for that Apple or Google identity even if no Perspicio account matches it.
 Study content — decks, flashcards, notes, goals, media items (links, pasted text, transcripts, summaries, and quizzes), question sets, and tutor conversations you create. Synced content is stored on our servers so it follows your account across devices; question sets stay on your device.
 Study activity — each question you answer and whether it was right, the topic it belongs to, and your reviews, retests, quiz results, and streaks are saved with your account. They power weak-area practice, retests, progress and readiness estimates, and recaps.
@@ -54,7 +55,7 @@ Replit hosts our servers and database, and provides the AI Integrations service 
 Google Firebase provides Apple and Google sign-in (Authentication), Cloud Firestore (which can hold synchronized copies of your account and study data), analytics, crash reports (Crashlytics), and push messages (Cloud Messaging).
 Sentry receives error and crash reports.
 Resend delivers our emails, so it receives your email address and the message, which can include your first name.
-RevenueCat manages in-app purchases and subscriptions (see Payments).
+RevenueCat manages in-app purchases and subscriptions and measures iOS ad activity and revenue linked to the same app user (see Payments and Ad measurement).
 YouTube (Google) plays videos inside the app through its embedded player, under Google's own privacy policy.
 Brave returns Explore results, so it receives your Explore queries.
 Have I Been Pwned checks the password you choose against known data breaches. It receives only the first five characters of the password's SHA-1 hash, never the password.
@@ -74,7 +75,7 @@ Deleting your account does not remove everything:
 Decks you published to the marketplace stay available to other users, without your account attached, unless you unpublish them first.
 AI usage records (the feature, time, token counts, and estimated cost of each request) and in-app usage events stay with your account ID removed. Usage events can still carry the random install ID. We keep both without a fixed deletion date.
 Server logs, which can include account IDs, install IDs, and IP addresses, are not edited when you delete your account.
-Records held by other companies follow their own policies. We do not send Apple or RevenueCat a deletion request, and nothing is removed from what Firebase Analytics, Crashlytics, Sentry, or Resend have already received. Stripe, and the copy of its records we keep in our own database, may keep customer, invoice, or payment records after your Stripe customer is deleted. A Firebase sign-in record made by an Apple or Google sign-in that matched no Perspicio account is not removed either.
+Records held by other companies follow their own policies. We do not send Apple or RevenueCat a deletion request, so RevenueCat's purchase and ad-measurement records are not automatically deleted when you delete your Perspicio account. Their retention follows RevenueCat's policies. Nothing is removed from what Firebase Analytics, Crashlytics, Sentry, or Resend have already received. Stripe, and the copy of its records we keep in our own database, may keep customer, invoice, or payment records after your Stripe customer is deleted. A Firebase sign-in record made by an Apple or Google sign-in that matched no Perspicio account is not removed either.
 Email
 We send transactional emails (a welcome message, password resets, and a notice if someone tries to sign up with an address that already has an account) and product emails: a suggestion to upgrade, sent at most once a month to people who have reached a plan limit in more than one month, and a weekly progress recap. Product emails have a one-click unsubscribe link, and the Upgrade emails switch under Email preferences in Office turns off all of them, the recap included. Our email provider, Resend, delivers them.
 
